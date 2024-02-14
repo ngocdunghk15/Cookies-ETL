@@ -1,6 +1,6 @@
 {
-  "name": "lull-poetic-unicorn",
-  "displayName": "Lull poetic unicorn",
+  "name": "cookies-etl",
+  "displayName": "Cookies ETL",
   "version": "0.0.1",
   "description": "Share secure cookies",
   "author": "dephrish",
@@ -10,6 +10,12 @@
     "package": "plasmo package"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "antd": "^5.14.1",
+    "antd-css-utilities": "^2.0.4",
+    "font-awesome": "^4.7.0",
     "plasmo": "0.84.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -28,7 +34,8 @@
       "https://*/*"
     ],
     "permissions": [
-      "tabs"
+      "tabs",
+      "cookies"
     ]
   }
 }
