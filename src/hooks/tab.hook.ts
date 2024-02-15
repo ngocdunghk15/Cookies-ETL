@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
-import { getActiveTab } from "~utils/tab.utils";
+import { getActiveTab, parseUrl } from "~utils/tab.utils";
 import Tab = chrome.tabs.Tab;
 
-function useTab() {
-	const [activeTab, setActiveTab] = useState<Tab>();
+function useActiveTab() {
+	const [tab, setTab] = useState<Tab>();
+	const origin = tab?.url ? parseUrl(tab?.url)?.origin : "";
+	const hostname = tab?.url ? parseUrl(tab?.url)?.hostname : "";
 
 	useEffect(() => {
 		getActiveTab().then(( tab ) => {
-			setActiveTab(tab);
+			setTab(tab);
 		});
 	}, []);
 
-	return activeTab as const;
+	return {tab, origin, hostname} as const;
 }
 
-export { useTab };
+export { useActiveTab };
