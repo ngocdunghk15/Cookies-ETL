@@ -1,3 +1,4 @@
+// @ts-ignore
 import Tab = chrome.tabs.Tab;
 
 export function getActiveTab(): Promise<Tab> {

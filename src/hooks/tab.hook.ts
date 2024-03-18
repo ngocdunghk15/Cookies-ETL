@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getActiveTab, parseUrl } from "~utils/tab.utils";
+import { getActiveTab, parseUrl } from "~utils/tab";
+// @ts-ignore
 import Tab = chrome.tabs.Tab;
 
 function useActiveTab() {
